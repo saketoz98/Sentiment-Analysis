@@ -1,7 +1,7 @@
 # Sentiment-Analysis
 
 ### Steps to run the project
-1. Clone "main" branch
+1. Clone the "main" branch
 2. Move into root directory and open the terminal.
 3. Execute - ```pip3 install -r requirements.txt``` to install all the required packages. (You may execute this command by creating and activating virtual environment on your machine)
 4. This project uses Google Cloud NLP Sentiment Analysis Model to predict the sentiments of the articles. To use the GCP API, you need to get API credentials (keys)
