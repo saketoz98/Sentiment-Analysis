@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     html_text = requests.get("https://www.aljazeera.com/where/mozambique/").text
     parsedHtml = BeautifulSoup(html_text, "lxml")
-    articles = parsedHtml.find_all("a", class_="u-clickable-card__link")
+    articles = parsedHtml.find_all("a", class_="u-clickable-card__link")    #Anchor tags with given class name are news headlines 
 
     result = []
 
@@ -42,7 +42,7 @@ if __name__ == "__main__":
         articleParsedHtml = BeautifulSoup(articleHtmlText, "lxml")
         articleContent = articleParsedHtml.find(
                             "div", 
-                            class_="wysiwyg wysiwyg--all-content css-1ck9wyi")
+                            class_="wysiwyg wysiwyg--all-content css-1ck9wyi")  #Content of the article is present inside the div with given class name
         if articleContent is not None:
             text = ""
             paragraphs = articleContent.find_all("p")

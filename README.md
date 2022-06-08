@@ -8,7 +8,7 @@
 5. Follow the steps given in the GCP documentation to generate API key - https://cloud.google.com/natural-language/docs/reference/libraries. Follow the steps till you export the path of credntials file in the terminal. (export GOOGLE_APPLICATION_CREDENTIALS="KEY_PATH")
 6. In the terminal, run ```python3 sentimentAnalysis.py```
 
-### Summary
+### Summary of the project files
 #### **articles.json**
 1. File contains the details of the articles extracted from the https://www.aljazeera.com/where/mozambique/ website and result of the sentiment analysis performed on these articles. 
 2. Attributes: <br />
@@ -16,10 +16,16 @@
    **content** - Content of the article extracted using beautifulsoup python library. <br />
    **sentimentScore** - Sentiment Score predicted by GCP Sentiment Analysis model. <br />
    **overallSentiment** - Based on the predicted score, article is categorized into "Positive", "Negative" and "Neutral" sentiments.
-3. overallSentiment is calculated using following logic: <br />
+3. overallSentiment is calculated using the following logic: <br />
    sentimentScore > 0.2 - Positive <br />
    sentimentScore < -0.2 - Negative <br />
    sentimentScore >= -0.2 and sentimentScore <= 0.2 - Neutral <br />
 
 #### **sentimentAnalysis.py**
 1. This is the main file which has the code to perform the web scrapping using beautifulsoup and predict the sentiment of the extracted articles.
+
+#### **visualization.py**
+1. This includes the code to visualize the predicted sentiments of the articles using plotly visualization library.
+
+#### **Visualizations Folder**
+1. The folder contains the screenshot of the final predicted results Bar Chart.
