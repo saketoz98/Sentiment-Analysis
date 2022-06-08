@@ -31,5 +31,5 @@
 1. The folder contains the screenshot of the Bar Chart showing articles with their sentiment score and categorization.
 
 ### Summary of the Results
-1. Articles Scrapped from Web - 10
+1. Number of articles scrapped from the Web - 10
 2. GCP Sentiment Analysis model predicts 3 "Neutral" and 7 "Negative" Sentiments. Results are documented in articles.json and visualization graphs.
