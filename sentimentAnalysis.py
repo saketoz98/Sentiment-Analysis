@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     result = []
 
-    for article in tqdm(articles, desc="Extract Articles from Web"):
+    for article in tqdm(articles[:11] if len(articles) >= 10 else articles, desc="Extract Articles from Web"):
         articleLink = article["href"]
         url = NEWS_ARTICLE_HOST + articleLink
         articleHtmlText = requests.get(url).text
