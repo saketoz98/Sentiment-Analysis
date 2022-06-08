@@ -9,14 +9,17 @@
 6. In the terminal, run ```python3 sentimentAnalysis.py```
 
 ### Summary
-#### articles.json file -
+#### **articles.json**
 1. File contains the details of the articles extracted from the https://www.aljazeera.com/where/mozambique/ website and result of the sentiment analysis performed on these articles. 
-2. Attributes:
-   url - URL of the article <br />
-   content - Content of the article extracted using beautifulsoup python library. <br />
-   sentimentScore - Sentiment Score predicted by GCP Sentiment Analysis model. <br />
-   overallSentiment - Based on the predicted score, article is categorized into "Positive", "Negative" and "Neutral" sentiments.
-3. overallSentiment is calculated using following logic:
+2. Attributes: <br />
+   **url** - URL of the article <br />
+   **content** - Content of the article extracted using beautifulsoup python library. <br />
+   **sentimentScore** - Sentiment Score predicted by GCP Sentiment Analysis model. <br />
+   **overallSentiment** - Based on the predicted score, article is categorized into "Positive", "Negative" and "Neutral" sentiments.
+3. overallSentiment is calculated using following logic: <br />
    sentimentScore > 0.2 - Positive <br />
    sentimentScore < -0.2 - Negative <br />
    sentimentScore >= -0.2 and sentimentScore <= 0.2 - Neutral <br />
+
+#### **sentimentAnalysis.py**
+1. This is the main file which has the code to perform the web scrapping using beautifulsoup and predict the sentiment of the extracted articles.
