@@ -14,7 +14,7 @@
 2. Attributes: <br />
    **url** - URL of the article <br />
    **content** - Content of the article extracted using beautifulsoup python library. <br />
-   **sentimentScore** - Sentiment Score predicted by GCP Sentiment Analysis model. <br />
+   **sentimentScore** - Sentiment Score predicted by GCP Sentiment Analysis model. [Range: -1 (Negative)  to 1 (Positive)] <br />
    **overallSentiment** - Based on the predicted score, article is categorized into "Positive", "Negative" and "Neutral" sentiments.
 3. overallSentiment is calculated using the following logic: <br />
    sentimentScore > 0.2 - Positive <br />
@@ -28,4 +28,4 @@
 1. This includes the code to visualize the predicted sentiments of the articles using plotly visualization library.
 
 #### **Visualizations Folder**
-1. The folder contains the screenshot of the final predicted results Bar Chart.
+1. The folder contains the screenshot of the Bar Chart showing articles with their sentiment score and categorization.

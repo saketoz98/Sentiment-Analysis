@@ -8,5 +8,6 @@ def visualizeResults(result):
     fig = px.bar(
         df, x="content", y="sentimentScore", color="overallSentiment", 
         title="Article Sentiment Scores", text_auto=True)
+        
     fig.show()
     pass
